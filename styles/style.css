@@ -69,7 +69,7 @@ body {
 .img-container:hover .overlay {
     opacity: 1;
 }
-.card-content h2{
+.card-content h1{
     color: var(--white);
     font-weight: 600;
     margin-top: 1rem;
@@ -78,7 +78,7 @@ body {
     cursor: pointer;
     transition: 0.3s ease;
 }
-.card-content h2:hover {
+.card-content h1:hover {
     color: var(--cyan);
 }
 .card-content p{
