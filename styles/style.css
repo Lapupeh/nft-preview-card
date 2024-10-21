@@ -1,0 +1,130 @@
+:root {
+/*COLORS*/
+ --dark-blue-main-BG: hsl(217, 54%, 11%);
+ --dark-blue-card-BG: hsl(216, 50%, 16%);
+ --dark-blue-line: hsl(215, 32%, 27%);
+ --white: hsl(0, 0%, 100%);
+ --soft-blue: hsl(215, 51%, 70%);
+ --cyan: hsl(178, 100%, 50%);
+
+ /*TYPOGRAPHY*/
+ --font-family: "outfit", serif;
+ --font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--soft-blue);
+    background-color: var(--dark-blue-main-BG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.card{
+    width: 19rem;
+    background-color: var(--dark-blue-card-BG);
+    border-radius: 10px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+}
+.main-img {
+    width: 17rem;
+    height: 16rem;
+    display: block;
+    border-radius: 10px;  
+}
+.img-container {
+    position: relative;
+    width: 17rem;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17rem;
+    height: 16rem;
+    background-color: rgba(0, 255, 255, 0.6);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.overlay:hover{
+    cursor: pointer;
+}
+.view-icon {
+    width: 3rem;
+    height: 3rem;
+    
+}
+.img-container:hover .overlay {
+    opacity: 1;
+}
+.card-content h2{
+    color: var(--white);
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.card-content h2:hover {
+    color: var(--cyan);
+}
+.card-content p{
+    font-weight: 300;
+    line-height: 1.4rem;
+    padding-bottom: 1rem;
+}
+.price-time {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--dark-blue-line); 
+}
+.price, .time {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 5px;
+}
+.price span {
+    color: var(--cyan);   
+}
+
+.creator {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    font-size: 15px;
+    padding-bottom: 0.6rem;
+
+}
+.creator .creator-name{
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.3s ease;
+    
+}
+.creator .creator-name:hover {
+    color: var(--cyan);
+}
+
+.creator img {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
